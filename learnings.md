@@ -72,4 +72,4 @@ A couple of things to try. Remove the ```<div id="comment-1"></div>```. What hap
 
 Create a second call to ```React.render();```. What happens?
 
->> Overites the first element
+>> Overites the first element. See more about ```React.render();``` [here in the offical documentation](http://facebook.github.io/react/docs/top-level-api.html#react.render)

@@ -7,11 +7,14 @@
     <script src="/react-et-al/build/JSXTransformer.js"></script>
   </head>
   <body>
-    <div id="example"></div>
+    <div id="comments"></div>
     <script type="text/jsx">
       React.render(
-        <div><h1>Hello, world!</h1><p>by Andrew Duckworth</p></div>,
-        document.getElementById('example')
+        <div id="comment-1">
+          <h1>Hello, world!</h1>
+          <p>by Andrew Duckworth</p>
+        </div>,
+        document.getElementById('comments')
       );
     </script>
   </body>
