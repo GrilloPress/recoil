@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Hello React!</title>
+    <script src="/react-et-al/build/react.js"></script>
+    <script src="/react-et-al/build/JSXTransformer.js"></script>
+  </head>
+  <body>
+    <div id="example"></div>
+    <script type="text/jsx">
+      React.render(
+        <h1>Hello, world!</h1>,
+        document.getElementById('example')
+      );
+      
+      React.render(
+        <h2>This is a second line!</h2>,
+        document.getElementById('example')
+      );
+    </script>
+  </body>
+</html>
