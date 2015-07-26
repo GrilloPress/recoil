@@ -85,6 +85,8 @@ Components are essentially the HTML that you render when you call ```React.rende
 
 This time, we'll create a custom component in its own variable that we can call.
 
+Create a file called something like ```hello-components.html```. Inside that file write:
+
 
 ```html
 <!DOCTYPE html>
@@ -118,4 +120,15 @@ This time, we'll create a custom component in its own variable that we can call.
 </html>
 ```
 
->> You have to enclose the element like ```<Comment/>```. This is because it is like an XML tag. You can enclose things in ```<Comment></Comment>```.
+Inside this file we've created a component using the ```createClass``` function and then rendered that by calling it within ```React.render();``` which will render the comment. 
+
+Let's go through the file bit by bit:
+
+1. Like before, we included the react.js and JSXtranformer.js files
+2. we set up the same div with the id of comments
+3. we create a variable of ```Comment``` to the value of ```React.createClass({});```
+4. Inside that we create a function that returns our HTML template with a comment
+5. We ensure the world gets to see our comment by calling the Comment variable inside a custom HTML tag called ```<Comment/>``` inside the ```React.render();``` function.
+6. As before the ```React.render();``` function injects our HTML into an element we selected, in this case the one with an ID of comments. Unlike before of course, this time we created a custom component (or element) and injected that in
+
+>> You have to enclose the element like ```<Comment/>```. This is because it is like an XML tag. You can enclose things in ```<Comment></Comment>```. [For reference see the documentation](http://facebook.github.io/react/tips/self-closing-tag.html)
