@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Hello React Components!</title>
+    <script src="/react-et-al/build/react.js"></script>
+    <script src="/react-et-al/build/JSXTransformer.js"></script>
+  </head>
+  <body>
+    <div id="comments"></div>
+    <script type="text/jsx">
+      var Comment = React.createClass({
+          render: function(){
+              return (
+                  <div id="comment-2">
+                    <h1>This is totes a comment!</h1>
+                    <p>by Andrew Duckworth</p>
+                  </div>
+              );
+          }
+      });
+      
+      React.render(
+          <Comment/>,
+          document.getElementById('comments')
+      );
+    </script>
+  </body>
+</html>
