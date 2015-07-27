@@ -2,7 +2,7 @@
 
 Inside the starter pack you'll find plenty of examples and inside the build directory you'll find several versions of react.js and the JSXTransformer
 
-> JSX is a version of JavaScript combined with XML. The idea of JSX is to make a JavaScript syntax better optimized for rendering HTML inside of JS objects.
+> JSX is a version of JavaScript combined with XML. The idea of JSX is to make a JavaScript syntax better optimized for rendering HTML inside of JS objects. At first the use of JSX and its XML-nature can be a bit of a put off for JS developers. But, stick with it. It is perfect for creating HTML templates with the added power of JavaScript.
 
 To get a handle on getting used to React.js, let's use these files but in our own html file.
 

@@ -1,6 +1,6 @@
 # React.js components
 
-We've just built a really simple thing. But you've not yet seen anything great about React.js.
+We've just built a really simple thing in the previous section. But you've not yet seen anything great about React.js.
 
 Let's use a core element of React.js called "components".
 
@@ -17,8 +17,8 @@ Create a file called something like ```hello-components.html```. Inside that fil
   <head>
     <meta charset="UTF-8" />
     <title>Hello React Components!</title>
-    <script src="/react-et-al/build/react.js"></script>
-    <script src="/react-et-al/build/JSXTransformer.js"></script>
+    <script src="/react-0.13.3/build/react.js"></script>
+    <script src="/react-0.13.3/build/JSXTransformer.js"></script>
   </head>
   <body>
     <div id="comments"></div>
@@ -55,6 +55,8 @@ Let's go through the file bit by bit:
 6. As before the ```React.render();``` function injects our HTML into an element we selected, in this case the one with an ID of comments. Unlike before of course, this time we created a custom component (or element) and injected that in
 
 >> You have to enclose the element like ```<Comment/>```. This is because it is like an XML tag. You can enclose things in ```<Comment></Comment>```. [For reference see the documentation](http://facebook.github.io/react/tips/self-closing-tag.html)
+
+Although this example was hardly great, you might just have a glimpse of what is great about React. Namely, an ability to create custom components which you can inject into your HTML.
 
 ### Further resources
 
