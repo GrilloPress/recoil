@@ -12,7 +12,7 @@ The first thing you have to do is download their starter pack. This is easily ac
 wget http://facebook.github.io/react/downloads/react-0.13.3.zip
 ```
 
->> Copying this will get the pack version 0.13.3, so when that is no longer the latest, find the version number you need
+> Copying this will get the pack version 0.13.3, so when that is no longer the latest, find the version number you need
 
 You can then unzip the file and either browse the examples or use the code to create your own. 
 
@@ -26,7 +26,7 @@ unzip react-0.13.3.zip && rm react-0.13.3.zip
 
 Inside the starter pack you'll find plenty of examples and inside the build directory you'll find several versions of react.js and the JSXTransformer
 
->> JSX is a version of JavaScript combined with XML. The idea of JSX is to make a JavaScript syntax better optimized for rendering HTML inside of JS objects.
+> JSX is a version of JavaScript combined with XML. The idea of JSX is to make a JavaScript syntax better optimized for rendering HTML inside of JS objects.
 
 To get a handle on getting used to React.js, let's use these files but in our own html file.
 
@@ -68,11 +68,11 @@ Open up your browser. You should see the stunning comment. If you find any error
 
 A couple of things to try. Remove the ```<div id="comment-1"></div>```. What happens?
 
->> It breaks. Needs to be wrapped by a single overarching element due to its XML nature
+> It breaks. Needs to be wrapped by a single overarching element due to its XML nature
 
 Create a second call to ```React.render();```. What happens?
 
->> Overites the first element. See more about ```React.render();``` [here in the offical documentation](http://facebook.github.io/react/docs/top-level-api.html#react.render)
+> Overites the first element. See more about ```React.render();``` [here in the offical documentation](http://facebook.github.io/react/docs/top-level-api.html#react.render)
 
 
 ## Using React.js Components

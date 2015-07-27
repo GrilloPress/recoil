@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Hello React Styles!</title>
+    <script src="/react-et-al/build/react-with-addons.js"></script>
+    <script src="/react-et-al/build/JSXTransformer.js"></script>
+    <style>
+      .important {
+        
+        color: blue;
+        
+      }
+      
+      .flipping-awesome-guy {
+        
+        text-transform: uppercase;
+        
+      }
+    </style>
+  </head>
+  <body>
+    <div id="comments"></div>
+    <script type="text/jsx">
+    
+      var commentStyles = {
+      
+        //inline method
+        color: 'pink'
+      
+      };
+    
+      var Comment = React.createClass({
+          render: function(){
+              
+              // manual class way
+              var yourClassName = 'important';
+              
+              // class in an object way
+              var classObjectWay = React.addons.classSet;
+              var classes = classObjectWay({
+                'flipping-awesome-guy': true
+              });
+          
+              return (
+                  <div id="comment-3">
+                    <h1 style={commentStyles}>Oh man, this is well styled</h1>
+                    <p className={yourClassName}><span className={classes}>by Andrew Duckworth</span></p>
+                  </div>
+              );
+          }
+      });
+      
+      React.render(
+          <Comment/>,
+          document.getElementById('comments')
+      );
+    </script>
+  </body>
+</html>
