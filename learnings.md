@@ -56,7 +56,7 @@ Create a file called something like ```hello-styles.html```. Inside that file th
       
         //inline method
         color: 'pink',
-        fontSize: "15px"
+        fontSize: '15px'
       
       };
     
@@ -136,7 +136,66 @@ As you can see, we write the html style attribute and inject into that, via a mo
 
 This way is pretty nice in terms of writing the CSS in a variable/object, but it isn't great in terms of the final markup.
 
-## adding classes
+## Adding classes one variable at a time
 
 The second way of adding a class is to add the desired class to your application through a single class variable declaration.
+
+In this example you create a variable and assign to it a string with your class attached like so:
+
+```js
+var yourClassName = 'important';
+```
+
+You then inject that into your component by setting ```className``` to your variable within a single set of moustaches as below:
+
+```js
+var Comment = React.createClass({
+          render: function(){
+              
+              var yourClassName = 'important';
+          
+              return (
+                  <div id="comment-3">
+                    // ...
+                    <p className={yourClassName}>by Andrew Duckworth</p>
+                  </div>
+              );
+          }
+      });
+```
+
+The benefit of this is we have class based styles inside our components now. This method covers a lot of use cases. 
+
+> You can also load up your variable with a whole raft of classes. It is essentially just a string that you are injecting into the class attribute. So, if you are leaning on the Bootstrap framework your button variable could look like:
+> ```js
+> var bootstrapButtonClass = "btn btn-primary btn-lg";
+> ```
+
+You can also add additional conditions. Here is an example of that:
+
+```js
+var Comment = React.createClass({
+          render: function(){
+              
+              // Other code removed for clarity
+              
+              if (authorIsTotesMegaCool) {
+                  yourClassName += ' totally-mega-important';
+              }
+          
+             // etc. ...           
+           
+          }
+      });
+```
+
+Now, if we build in some functionality where we can set certain conditions we can add some extra classes to our original string and they will render into our HTML.
+
+However, there are issues using this method as different scenarios (active, alerts etc. etc.) may require a dedicated variable. This could make our components a little bit messy.
+
+That is, if we have a small app where there are a few conditions (if condition A etc.) for a component this isn't too much of an issue and is managable. If we have numerous components all with seperate, complicated conditions to which CSS class should be used however, this method can get a little brittle and repetative - nevermind complicated to read and debug. 
+
+There is another way of adding classes which modularizes the CSS classes we want to add.
+
+## Adding classes through a class object
 

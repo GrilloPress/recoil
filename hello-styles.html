@@ -27,7 +27,7 @@
       
         //inline method
         color: 'pink',
-        fontSize: "25px"
+        fontSize: '25px'
       
       };
     
@@ -35,7 +35,11 @@
           render: function(){
               
               // manual class way
-              var yourClassName = 'important';
+              var yourClassName = 'important'; // You can actually load this up with several classes
+              
+              if (true) {
+                yourClassName += ' totally-mega-important';
+              }
               
               // class in an object way
               var classObjectWay = React.addons.classSet;
