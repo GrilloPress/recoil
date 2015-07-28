@@ -1,10 +1,26 @@
 # Adding styles to your components
 
-Up to now we've added a component but without any classes or styles. Let's learn how to add some.
+Up to now we've added a component but without any classes or styles. 
 
-We'll go through adding styles three ways:
+Naturally one way is to write into our component the classes we want. This makes sense for static classes, that is, classes that won't change. Something like:
 
-1. Inline aka 1995
+```js
+var Comment = React.createClass({
+          render: function(){
+              return (
+                  <div class="well" id="comment-2">
+                    <h1>This is totes a comment!</h1>
+                    <p class="lead">by Andrew Duckworth</p>
+                  </div>
+              );
+          }
+      });
+```
+Here we've added in the ```.well``` class on the ```<div>``` and ```.lead``` class on our paragraph. But for an interactive app, we may want to be able to update classes and styles on the fly.
+
+Let's learn how to add some style to our components. We'll do this three ways:
+
+1. Inline aka 1997
 2. Through creating a variable per line of CSS
 3. Through the use of a JavaScript object
 
@@ -85,6 +101,18 @@ Make sure you link to the addons file correctly and have some styles to call. Le
 ## adding styles inline
 
 To add styles inline we create a variable and an object in which we add the styles. We create the CSS using the JavaScript names - like you would in jQuery - so instead of ```font-size``` is it ```fontSize```.
+
+So, in our example we created our inline styles like this:
+
+```js
+var commentStyles = {
+      
+        //inline method
+        color: 'pink',
+        fontSize: "15px"
+      
+      };
+```
 
 To get this into the Comment we add it into the HTML template, within the render function like so:
 
