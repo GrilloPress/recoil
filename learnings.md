@@ -199,3 +199,10 @@ There is another way of adding classes which modularizes the CSS classes we want
 
 ## Adding classes through a class object
 
+This process leverages a plugin
+
+Can place into it the conditions required to make a class active etc.
+
+Issue being that it is a plugin and additional cost. Plugin will be removed from offical set of add-ons. 
+
+### Further Resources
