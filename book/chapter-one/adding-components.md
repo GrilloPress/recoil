@@ -54,7 +54,7 @@ Let's go through the file bit by bit:
 5. We ensure the world gets to see our comment by calling the Comment variable inside a custom HTML tag called ```<Comment/>``` inside the ```React.render();``` function.
 6. As before the ```React.render();``` function injects our HTML into an element we selected, in this case the one with an ID of comments. Unlike before of course, this time we created a custom component (or element) and injected that in
 
->> You have to enclose the element like ```<Comment/>```. This is because it is like an XML tag. You can enclose things in ```<Comment></Comment>```. [For reference see the documentation](http://facebook.github.io/react/tips/self-closing-tag.html)
+> You have to enclose the element like ```<Comment/>```. This is because it is like an XML tag. You can enclose things in ```<Comment></Comment>```. [For reference see the documentation](http://facebook.github.io/react/tips/self-closing-tag.html)
 
 Although this example was hardly great, you might just have a glimpse of what is great about React. Namely, an ability to create custom components which you can inject into your HTML.
 

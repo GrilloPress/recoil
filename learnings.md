@@ -180,6 +180,8 @@ var Comment = React.createClass({
               // Other code removed for clarity
               
               if (authorIsTotesMegaCool) {
+              
+                  // note the space infront of the new class
                   yourClassName += ' totally-mega-important';
               }
           
