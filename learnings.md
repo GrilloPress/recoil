@@ -54,7 +54,7 @@ Create a file called something like ```hello-styles.html```. Inside that file th
     
       var commentStyles = {
       
-        //inline method
+        //inline method, notice it uses JavaScript syntax for CSS
         color: 'pink',
         fontSize: '15px'
       
@@ -69,7 +69,8 @@ Create a file called something like ```hello-styles.html```. Inside that file th
               // class in an object way
               var classObjectWay = React.addons.classSet;
               var classes = classObjectWay({
-                'flipping-awesome-guy': true
+                'flipping-awesome-guy': true,
+                'dull': this.props.isDull
               });
           
               return (
@@ -201,10 +202,50 @@ There is another way of adding classes which modularizes the CSS classes we want
 
 ## Adding classes through a class object
 
-This process leverages a plugin
+In order to add classes through a class object you need to include an additional plugin.
 
-Can place into it the conditions required to make a class active etc.
+To do so with the react.js starter pack we include the following line:
 
-Issue being that it is a plugin and additional cost. Plugin will be removed from offical set of add-ons. 
+```
+<script src="/react-et-al/build/react-with-addons.js"></script>
+```
+
+This is instead of just ```react.js```.
+
+With our plugins included with can now leverage the ```React.addons.classSet``` functionality.
+
+We start by declaring a variable to the ```classSet()``` function like so:
+
+```js
+var classObjectWay = React.addons.classSet;
+```
+
+We can then use ```classObjectWay``` to create an object with all of our potential values in one place.
+
+```js
+// class in an object way
+              var classObjectWay = React.addons.classSet;
+              var classes = classObjectWay({
+                'flipping-awesome-guy': true,
+                'not-getting-added': false, // Anything false doesn't get added
+                'dull': this.props.isDull // don't worry if this is confusing. We'll cover props later. Essentially you can add classes if your element is indicted as dull or whatever you want to set. Like above, this relates to flase and dull is not added
+              });
+```
+
+So within the ```classObjectWay({})``` object we declared you can set CSS classes that will be assigned if the value on the right is true or false. If they are true, they get added. If they aren't, they don't.
+
+As you may be able to imagine, this allows us to declare in one place all of the various states and their corresponding CSS classes for alerts.
+
+Another benefit of this method is reduced lines of conditionals like ```if(this.props.isDull){ ... }``` and the lack of repliance on adding strings togther
+
+A issue of course is that we are not relying on a plugin.
+
+You may have also noticed that we get the following warning from our browser
+
+```
+Warning: React.addons.classSet will be deprecated in a future version. See http://fb.me/react-addons-classset
+```
+
+The new home for the ```classSet()``` plugin is here: https://github.com/JedWatson/classnames 
 
 ### Further Resources

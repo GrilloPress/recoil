@@ -17,6 +17,13 @@
         text-transform: uppercase;
         
       }
+      
+      .dull {
+        
+        color: brown;
+        
+      }
+      
     </style>
   </head>
   <body>
@@ -44,7 +51,9 @@
               // class in an object way
               var classObjectWay = React.addons.classSet;
               var classes = classObjectWay({
-                'flipping-awesome-guy': true
+                'flipping-awesome-guy': true,
+                'not-getting-added': false,
+                'dull': this.props.isDull
               });
           
               return (
