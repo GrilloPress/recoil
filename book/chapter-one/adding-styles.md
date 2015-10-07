@@ -210,6 +210,12 @@ To do so with the react.js starter pack we include the following line:
 <script src="/react-et-al/build/react-with-addons.js"></script>
 ```
 
+> As of React 0.14 this is no longer true.
+> You must now include https://github.com/JedWatson/classnames
+> Add this in, and instead of ```classSet``` use ```classNames()```
+> In the code for this chapter you can just include ```the classNames.js``` file.
+> In production apps, install via NPM etc.
+
 This is instead of just ```react.js```.
 
 With our plugins included with can now leverage the ```React.addons.classSet``` functionality.
